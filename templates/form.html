@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>填写信息</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 2rem 3rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            align-items: center;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"] {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        button {
+            padding: 0.75rem;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .view-records-link {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+        .view-records-link a {
+            color: #8e44ad;
+            text-decoration: none;
+        }
+        .view-records-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>填写信息</h1>
+        <form action="/submit" method="post">
+            <div class="form-group">
+                <label for="name">名称:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="value1">值1:</label>
+                <input type="text" id="value1" name="value1">
+            </div>
+            <div class="form-group">
+                <label for="value2">值2:</label>
+                <input type="text" id="value2" name="value2">
+            </div>
+            <div class="form-group">
+                <label for="value3">值3:</label>
+                <input type="text" id="value3" name="value3">
+            </div>
+            <button type="submit">提交</button>
+        </form>
+        <div class="view-records-link">
+            <a href="/view">查看所有记录</a>
+        </div>
+    </div>
+</body>
+</html>
